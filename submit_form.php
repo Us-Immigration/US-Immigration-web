@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         mysqli_stmt_bind_param($stmt, 'ssssss', $firstName, $secondName, $familyName, $email, $phoneNumber, $target_file);
 
         if (mysqli_stmt_execute($stmt)) {
-            header('Location: thankyou.php');
+            header('Location: thankyou.html');
             exit();
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
